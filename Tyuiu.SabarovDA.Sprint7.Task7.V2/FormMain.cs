@@ -17,9 +17,9 @@ namespace Tyuiu.SabarovDA.Sprint7.Task7.V2
             InitializeComponent();
             DataTable dataTable = new DataTable();
         }
+
         private void button2_Click(object sender, EventArgs e)
-       
-        {
+            {
             // Получаем значения из текстовых полей
             string num = textBoxNum_SDA.Text;
             string fio = textBoxFIO_SDA.Text;
@@ -74,9 +74,9 @@ namespace Tyuiu.SabarovDA.Sprint7.Task7.V2
             textBoxCash_SDA.Clear();
         }
 
-        
 
-        private void button1_Click(object sender, EventArgs e)
+
+            private void button1_Click(object sender, EventArgs e)
         {
 
         }
@@ -183,6 +183,46 @@ namespace Tyuiu.SabarovDA.Sprint7.Task7.V2
             {
                 MessageBox.Show($"Ошибка при загрузке файла: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void buttonSearch_SDA_Click(object sender, EventArgs e)
+        {
+            ClearCellFormatting();
+
+            string searchText = textBoxSearch_SDA.Text.ToLower(); // Приводим к нижнему регистру для регистронезависимого поиска
+
+            // Проходим по каждой строке в DataGridView
+            foreach (DataGridViewRow row in dataGridViewRes_SDA.Rows)
+            {
+                // Проходим по каждой ячейке в текущей строке
+                foreach (DataGridViewCell cell in row.Cells)
+                {
+                    // Если текст в ячейке содержит введенную строку поиска
+                    if (cell.Value != null && cell.Value.ToString().ToLower().Contains(searchText))
+                    {
+                        // Выделяем найденную ячейку (может потребоваться отключить этот блок, если не нужно выделять)
+                        cell.Style.BackColor = Color.Yellow;
+                    }
+                }
+            }
+        }
+
+        // Очистка выделения в DataGridView
+        private void ClearCellFormatting()
+        {
+            foreach (DataGridViewRow row in dataGridViewRes_SDA.Rows)
+            {
+                foreach (DataGridViewCell cell in row.Cells)
+                {
+                    cell.Style.BackColor = dataGridViewRes_SDA.DefaultCellStyle.BackColor;
+                }
+            }
+        }
+
+        private void buttonHelp_SDA_Click(object sender, EventArgs e)
+        {
+            FormAbout_SDA about = new FormAbout_SDA();
+            about.ShowDialog();
         }
     }
 }

@@ -117,8 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="photo_2023-12-16_13-24-20" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\photo_2023-12-16_13-24-20.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Добавить - Добавление новой строки с учетом введенных данных
+
+Выбрать файл - Добавление таблицы в программу, из выбранного файла CSV
+
+Сохранить в - Сохранение по выбранному пути таблицы из программы
+
+Поиск - Поиск определенного слова или символа в таблице
+
+
+Порядок действий:
+1. Ввести данные 
+2. Нажать кнопку "Добавить"
+</value>
   </data>
 </root>

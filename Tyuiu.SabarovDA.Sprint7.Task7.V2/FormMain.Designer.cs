@@ -29,9 +29,10 @@ namespace Tyuiu.SabarovDA.Sprint7.Task7.V2
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.TaskButton_SDA = new System.Windows.Forms.Panel();
             this.labelSearch_SDA = new System.Windows.Forms.Label();
             this.textBoxSearch_SDA = new System.Windows.Forms.TextBox();
@@ -57,12 +58,13 @@ namespace Tyuiu.SabarovDA.Sprint7.Task7.V2
             this.panelRes_SDA = new System.Windows.Forms.Panel();
             this.groupBoxRes_SDA = new System.Windows.Forms.GroupBox();
             this.dataGridViewRes_SDA = new System.Windows.Forms.DataGridView();
-            this.chartRes_SDA = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.Номер = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ФИО = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Адресс = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Телефон = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Выручка = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.chartRes_SDA = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.toolTip_SDA = new System.Windows.Forms.ToolTip(this.components);
             this.TaskButton_SDA.SuspendLayout();
             this.groupBoxTask_SDA.SuspendLayout();
             this.panelInPut_SDA.SuspendLayout();
@@ -108,31 +110,39 @@ namespace Tyuiu.SabarovDA.Sprint7.Task7.V2
             // 
             // buttonSearch_SDA
             // 
+            this.buttonSearch_SDA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.buttonSearch_SDA.Location = new System.Drawing.Point(902, 6);
             this.buttonSearch_SDA.Name = "buttonSearch_SDA";
             this.buttonSearch_SDA.Size = new System.Drawing.Size(94, 91);
             this.buttonSearch_SDA.TabIndex = 6;
             this.buttonSearch_SDA.Text = "Поиск";
-            this.buttonSearch_SDA.UseVisualStyleBackColor = true;
+            this.toolTip_SDA.SetToolTip(this.buttonSearch_SDA, "Поиск определенного слова или символа в таблице");
+            this.buttonSearch_SDA.UseVisualStyleBackColor = false;
+            this.buttonSearch_SDA.Click += new System.EventHandler(this.buttonSearch_SDA_Click);
             // 
             // buttonHelp_SDA
             // 
+            this.buttonHelp_SDA.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.buttonHelp_SDA.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.buttonHelp_SDA.Location = new System.Drawing.Point(1336, 6);
             this.buttonHelp_SDA.Name = "buttonHelp_SDA";
             this.buttonHelp_SDA.Size = new System.Drawing.Size(94, 91);
             this.buttonHelp_SDA.TabIndex = 5;
             this.buttonHelp_SDA.Text = "Справка";
+            this.toolTip_SDA.SetToolTip(this.buttonHelp_SDA, "Инструкция пользования, данные создателя");
             this.buttonHelp_SDA.UseVisualStyleBackColor = false;
+            this.buttonHelp_SDA.Click += new System.EventHandler(this.buttonHelp_SDA_Click);
             // 
             // buttonSaveIn_SDA
             // 
+            this.buttonSaveIn_SDA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.buttonSaveIn_SDA.Location = new System.Drawing.Point(603, 6);
             this.buttonSaveIn_SDA.Name = "buttonSaveIn_SDA";
             this.buttonSaveIn_SDA.Size = new System.Drawing.Size(94, 91);
             this.buttonSaveIn_SDA.TabIndex = 4;
             this.buttonSaveIn_SDA.Text = "Сохранить в";
-            this.buttonSaveIn_SDA.UseVisualStyleBackColor = true;
+            this.toolTip_SDA.SetToolTip(this.buttonSaveIn_SDA, "Сохранение по выбранному пути таблицы из программы");
+            this.buttonSaveIn_SDA.UseVisualStyleBackColor = false;
             this.buttonSaveIn_SDA.Click += new System.EventHandler(this.button3_Click);
             // 
             // buttonDone_SDA
@@ -143,17 +153,20 @@ namespace Tyuiu.SabarovDA.Sprint7.Task7.V2
             this.buttonDone_SDA.Size = new System.Drawing.Size(94, 91);
             this.buttonDone_SDA.TabIndex = 3;
             this.buttonDone_SDA.Text = "Добавить";
+            this.toolTip_SDA.SetToolTip(this.buttonDone_SDA, "Добавление новой строки с учетом введенных данных");
             this.buttonDone_SDA.UseVisualStyleBackColor = false;
             this.buttonDone_SDA.Click += new System.EventHandler(this.button2_Click);
             // 
             // buttonInPut_SDA
             // 
+            this.buttonInPut_SDA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.buttonInPut_SDA.Location = new System.Drawing.Point(503, 6);
             this.buttonInPut_SDA.Name = "buttonInPut_SDA";
             this.buttonInPut_SDA.Size = new System.Drawing.Size(94, 91);
             this.buttonInPut_SDA.TabIndex = 2;
             this.buttonInPut_SDA.Text = "Выбрать файл";
-            this.buttonInPut_SDA.UseVisualStyleBackColor = true;
+            this.toolTip_SDA.SetToolTip(this.buttonInPut_SDA, "Добавление таблицы в программу, из выбранного файла CSV");
+            this.buttonInPut_SDA.UseVisualStyleBackColor = false;
             this.buttonInPut_SDA.Click += new System.EventHandler(this.buttonInPut_SDA_Click);
             // 
             // groupBoxTask_SDA
@@ -250,6 +263,8 @@ namespace Tyuiu.SabarovDA.Sprint7.Task7.V2
             // 
             // textBoxFIO_SDA
             // 
+            this.textBoxFIO_SDA.BackColor = System.Drawing.Color.White;
+            this.textBoxFIO_SDA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxFIO_SDA.Location = new System.Drawing.Point(161, 92);
             this.textBoxFIO_SDA.Multiline = true;
             this.textBoxFIO_SDA.Name = "textBoxFIO_SDA";
@@ -258,6 +273,8 @@ namespace Tyuiu.SabarovDA.Sprint7.Task7.V2
             // 
             // textBoxCash_SDA
             // 
+            this.textBoxCash_SDA.BackColor = System.Drawing.Color.White;
+            this.textBoxCash_SDA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxCash_SDA.Location = new System.Drawing.Point(161, 304);
             this.textBoxCash_SDA.Multiline = true;
             this.textBoxCash_SDA.Name = "textBoxCash_SDA";
@@ -266,6 +283,8 @@ namespace Tyuiu.SabarovDA.Sprint7.Task7.V2
             // 
             // textBoxNum_SDA
             // 
+            this.textBoxNum_SDA.BackColor = System.Drawing.Color.White;
+            this.textBoxNum_SDA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxNum_SDA.Location = new System.Drawing.Point(161, 30);
             this.textBoxNum_SDA.Multiline = true;
             this.textBoxNum_SDA.Name = "textBoxNum_SDA";
@@ -274,6 +293,8 @@ namespace Tyuiu.SabarovDA.Sprint7.Task7.V2
             // 
             // textBoxPhone_SDA
             // 
+            this.textBoxPhone_SDA.BackColor = System.Drawing.Color.White;
+            this.textBoxPhone_SDA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxPhone_SDA.Location = new System.Drawing.Point(161, 237);
             this.textBoxPhone_SDA.Multiline = true;
             this.textBoxPhone_SDA.Name = "textBoxPhone_SDA";
@@ -282,6 +303,8 @@ namespace Tyuiu.SabarovDA.Sprint7.Task7.V2
             // 
             // textBoxAdres_SDA
             // 
+            this.textBoxAdres_SDA.BackColor = System.Drawing.Color.White;
+            this.textBoxAdres_SDA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxAdres_SDA.Location = new System.Drawing.Point(161, 161);
             this.textBoxAdres_SDA.Multiline = true;
             this.textBoxAdres_SDA.Name = "textBoxAdres_SDA";
@@ -290,8 +313,10 @@ namespace Tyuiu.SabarovDA.Sprint7.Task7.V2
             // 
             // panelRes_SDA
             // 
+            this.panelRes_SDA.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelRes_SDA.Controls.Add(this.groupBoxRes_SDA);
-            this.panelRes_SDA.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelRes_SDA.Location = new System.Drawing.Point(403, 100);
             this.panelRes_SDA.Name = "panelRes_SDA";
             this.panelRes_SDA.Size = new System.Drawing.Size(1030, 350);
@@ -299,6 +324,9 @@ namespace Tyuiu.SabarovDA.Sprint7.Task7.V2
             // 
             // groupBoxRes_SDA
             // 
+            this.groupBoxRes_SDA.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBoxRes_SDA.Controls.Add(this.dataGridViewRes_SDA);
             this.groupBoxRes_SDA.Controls.Add(this.chartRes_SDA);
             this.groupBoxRes_SDA.Location = new System.Drawing.Point(6, 6);
@@ -310,6 +338,10 @@ namespace Tyuiu.SabarovDA.Sprint7.Task7.V2
             // 
             // dataGridViewRes_SDA
             // 
+            this.dataGridViewRes_SDA.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewRes_SDA.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewRes_SDA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewRes_SDA.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Номер,
@@ -321,22 +353,6 @@ namespace Tyuiu.SabarovDA.Sprint7.Task7.V2
             this.dataGridViewRes_SDA.Name = "dataGridViewRes_SDA";
             this.dataGridViewRes_SDA.Size = new System.Drawing.Size(579, 337);
             this.dataGridViewRes_SDA.TabIndex = 1;
-            // 
-            // chartRes_SDA
-            // 
-            chartArea2.Name = "ChartArea1";
-            this.chartRes_SDA.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartRes_SDA.Legends.Add(legend2);
-            this.chartRes_SDA.Location = new System.Drawing.Point(591, 19);
-            this.chartRes_SDA.Name = "chartRes_SDA";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chartRes_SDA.Series.Add(series2);
-            this.chartRes_SDA.Size = new System.Drawing.Size(421, 322);
-            this.chartRes_SDA.TabIndex = 0;
-            this.chartRes_SDA.Text = "chart1";
             // 
             // Номер
             // 
@@ -363,14 +379,39 @@ namespace Tyuiu.SabarovDA.Sprint7.Task7.V2
             this.Выручка.HeaderText = "Выручка";
             this.Выручка.Name = "Выручка";
             // 
+            // chartRes_SDA
+            // 
+            this.chartRes_SDA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            chartArea1.Name = "ChartArea1";
+            this.chartRes_SDA.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartRes_SDA.Legends.Add(legend1);
+            this.chartRes_SDA.Location = new System.Drawing.Point(591, 19);
+            this.chartRes_SDA.Name = "chartRes_SDA";
+            series1.ChartArea = "ChartArea1";
+            series1.IsVisibleInLegend = false;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartRes_SDA.Series.Add(series1);
+            this.chartRes_SDA.Size = new System.Drawing.Size(421, 322);
+            this.chartRes_SDA.TabIndex = 0;
+            this.chartRes_SDA.Text = "Выручка";
+            // 
+            // toolTip_SDA
+            // 
+            this.toolTip_SDA.IsBalloon = true;
+            this.toolTip_SDA.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            // 
             // FormProject_SDA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1433, 450);
             this.Controls.Add(this.panelRes_SDA);
             this.Controls.Add(this.panelInPut_SDA);
             this.Controls.Add(this.TaskButton_SDA);
+            this.MinimumSize = new System.Drawing.Size(1449, 489);
             this.Name = "FormProject_SDA";
             this.Text = "Проект";
             this.TaskButton_SDA.ResumeLayout(false);
@@ -421,6 +462,7 @@ namespace Tyuiu.SabarovDA.Sprint7.Task7.V2
         private System.Windows.Forms.DataGridViewTextBoxColumn Адресс;
         private System.Windows.Forms.DataGridViewTextBoxColumn Телефон;
         private System.Windows.Forms.DataGridViewTextBoxColumn Выручка;
+        private System.Windows.Forms.ToolTip toolTip_SDA;
     }
 }
 
