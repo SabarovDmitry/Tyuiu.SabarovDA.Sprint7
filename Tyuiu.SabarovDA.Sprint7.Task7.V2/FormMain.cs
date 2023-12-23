@@ -18,7 +18,7 @@ namespace Tyuiu.SabarovDA.Sprint7.Task7.V2
             DataTable dataTable = new DataTable();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonDone_SDA_Click(object sender, EventArgs e)
             {
             // Получаем значения из текстовых полей
             string num = textBoxNum_SDA.Text;
@@ -75,13 +75,7 @@ namespace Tyuiu.SabarovDA.Sprint7.Task7.V2
         }
 
 
-
-            private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
+        private void buttonSaveIn_SDA_Click(object sender, EventArgs e)
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "CSV files (*.csv)|*.csv|All files (*.*)|*.*";

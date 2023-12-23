@@ -143,7 +143,7 @@ namespace Tyuiu.SabarovDA.Sprint7.Task7.V2
             this.buttonSaveIn_SDA.Text = "Сохранить в";
             this.toolTip_SDA.SetToolTip(this.buttonSaveIn_SDA, "Сохранение по выбранному пути таблицы из программы");
             this.buttonSaveIn_SDA.UseVisualStyleBackColor = false;
-            this.buttonSaveIn_SDA.Click += new System.EventHandler(this.button3_Click);
+            this.buttonSaveIn_SDA.Click += new System.EventHandler(this.buttonSaveIn_SDA_Click);
             // 
             // buttonDone_SDA
             // 
@@ -155,7 +155,7 @@ namespace Tyuiu.SabarovDA.Sprint7.Task7.V2
             this.buttonDone_SDA.Text = "Добавить";
             this.toolTip_SDA.SetToolTip(this.buttonDone_SDA, "Добавление новой строки с учетом введенных данных");
             this.buttonDone_SDA.UseVisualStyleBackColor = false;
-            this.buttonDone_SDA.Click += new System.EventHandler(this.button2_Click);
+            this.buttonDone_SDA.Click += new System.EventHandler(this.buttonDone_SDA_Click);
             // 
             // buttonInPut_SDA
             // 
@@ -187,6 +187,9 @@ namespace Tyuiu.SabarovDA.Sprint7.Task7.V2
             this.textBoxTask_SDA.ReadOnly = true;
             this.textBoxTask_SDA.Size = new System.Drawing.Size(387, 65);
             this.textBoxTask_SDA.TabIndex = 0;
+            this.textBoxTask_SDA.Text = "Разработать Desktop приложение на основе Windows Forms по предметной области.\r\n В" +
+    "се данные должны храниться в формате файла CSV \r\nПРЕДМЕТНАЯ ОБЛАСТЬ: Сеть магази" +
+    "нов";
             // 
             // panelInPut_SDA
             // 
